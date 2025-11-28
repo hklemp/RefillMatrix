@@ -1,0 +1,170 @@
+:root {
+    --bg-color: #1e1e24;
+    --text-color: #f0f0f5;
+    --table-header: #2d2d35;
+    --border-color: #444;
+    
+    --status-ok: #2ecc71;
+    --status-adapter: #f1c40f;
+    --status-no: #e74c3c;
+    --status-unknown: #95a5a6;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+}
+
+h1 { text-align: center; }
+p { text-align: center; opacity: 0.8; }
+
+/* Legende */
+.legend {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.badge {
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #1e1e24;
+}
+
+.badge.ok { background-color: var(--status-ok); }
+.badge.adapter { background-color: var(--status-adapter); }
+.badge.no { background-color: var(--status-no); }
+.badge.unknown { background-color: var(--status-unknown); }
+
+/* Matrix Tabelle */
+.table-wrapper {
+    overflow-x: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #25252b;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: center;
+    border: 1px solid var(--border-color);
+}
+
+/* Sticky Header und erste Spalte */
+thead th {
+    background-color: var(--table-header);
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    font-size: 1.1em;
+}
+
+tbody th {
+    background-color: var(--table-header);
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    text-align: left;
+}
+
+/* Interaktive Zellen */
+td {
+    transition: background 0.2s;
+    cursor: default;
+    font-size: 1.2em;
+}
+
+td.ok { color: var(--status-ok); background: rgba(46, 204, 113, 0.1); }
+td.adapter { color: var(--status-adapter); background: rgba(241, 196, 15, 0.1); cursor: help; }
+td.no { color: var(--status-no); background: rgba(231, 76, 60, 0.1); }
+td.unknown { color: var(--status-unknown); opacity: 0.3; }
+
+td:hover {
+    filter: brightness(1.2);
+}
+
+/* Tooltip Indikator */
+.has-tooltip {
+    text-decoration: underline dotted;
+}
+
+/* Link-Icon in Tabellenköpfen */
+.header-link {
+    text-decoration: none;
+    margin-left: 5px;
+    opacity: 0.6;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.header-link:hover {
+    opacity: 1;
+}
+
+/* Icon-Wrapper für vertikale Anordnung */
+.icon-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.status-icon {
+    font-size: 1.2em; /* Behält die ursprüngliche Größe */
+}
+
+.link-icon {
+    font-size: 0.8em; /* Kleinere Schriftgröße für das Link-Icon */
+    margin-top: 4px; /* Kleiner Abstand nach oben */
+}
+
+/* GitHub Fork Ribbon */
+.github-fork-ribbon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 0;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    text-decoration: none;
+    z-index: 9999;
+}
+
+.github-fork-ribbon:before {
+    content: "Fork me on GitHub";
+    position: absolute;
+    top: 45px;
+    right: -45px;
+    width: 200px;
+    padding: 3px 0;
+    background-color: #333;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    text-align: center;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
+.github-fork-ribbon:hover:before {
+    background-color: #444;
+}

@@ -1,0 +1,34 @@
+{
+  "spool": [
+    { "name": "RichRap MasterSpool", "urls": ["https://www.thingiverse.com/thing:2769823"] },
+    { "name": "Bambu Spool", "urls": ["https://bambulab.com/","https://makerworld.com/de/models/12683-bambu-spool#profileId-12683"] },
+    { "name": "Fiberlogy Spool", "urls": ["https://fiberlogy.com/en_US/index"] }  
+    ],
+  "refill": [
+    { "name": "Das Filament", "url": "https://www.dasfilament.de/filament-refill/" },
+    { "name": "Bambu Lab", "url": "https://bambulab.com/" },
+    {"name": "Fiberlogy", "url": "https://www.fiberlogy.com/en/collections/refill-spools"}
+  ],
+  "compatibility": [
+    {
+      "refill": "Das Filament",
+      "spool": "RichRap MasterSpool",
+      "status": "ok",
+      "note": ""
+    },
+    {
+      "refill": "Bambu Lab",
+      "spool": "Bambu Spool",
+      "status": "ok",
+      "note": ""
+    },
+    {
+      "refill":"Das Filament",
+      "spool":"Bambu Spool",
+      "status":"adapter",
+      "note":"Adapter ring needed",
+      "link":"https://www.dasfilament.de/zubehoer/913/refill-adapter-ring-fuer-bambu-lab-spulen?c=63"
+    }
+
+  ]
+}
