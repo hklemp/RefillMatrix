@@ -44,8 +44,8 @@ function buildMatrix(data) {
         spools.forEach(spoolBrand => {
             let cell = document.createElement('td');
             
-            // Search for a rule for this combination
-            const match = rules.find(r => r.refill === refillBrand.name && r.spool === spoolBrand.name);
+            // Search for a rule for this combination using IDs
+            const match = rules.find(r => r.refill_id === refillBrand.id && r.spool_id === spoolBrand.id);
 
             if (match) {
                 cell.classList.add(match.status);
@@ -90,7 +90,7 @@ function buildMatrix(data) {
 function getStatusIcon(status) {
     switch(status) {
         case 'ok': return '✅';
-        case 'adapter': return '⚠️';
+        case 'warning': return '⚠️';
         case 'no': return '❌';
         default: return '?';
     }

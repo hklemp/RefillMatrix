@@ -1,34 +1,140 @@
 {
   "spool": [
-    { "name": "RichRap MasterSpool", "urls": ["https://www.thingiverse.com/thing:2769823"] },
-    { "name": "Bambu Spool", "urls": ["https://bambulab.com/","https://makerworld.com/de/models/12683-bambu-spool#profileId-12683"] },
-    { "name": "Fiberlogy Spool", "urls": ["https://fiberlogy.com/en_US/index"] }  
-    ],
+    {
+      "id": "richrapspool",
+      "name": "RichRap MasterSpool",
+      "urls": [
+        "https://www.thingiverse.com/thing:2769823"
+      ]
+    },
+    {
+      "id": "bambuspool",
+      "name": "Bambu Spool",
+      "urls": [
+        "https://bambulab.com/",
+        "https://makerworld.com/de/models/12683-bambu-spool#profileId-12683"
+      ]
+    },
+    {
+      "id": "fiberlogyspool",
+      "name": "Fiberlogy Spool",
+      "urls": [
+        "https://fiberlogy.com/en_US/index"
+      ]
+    },
+    {
+      "id": "dasfilament_v32",
+      "name": "Das Filament <br/>MasterSpool <br/> DF Edition V3.2",
+      "urls": [
+        "https://www.dasfilament.de/zubehoer/362/masterspool-df-edition-v3.2-wiederverwendbare-leerspule-fuer-refills?c=63"
+      ]
+    },
+    {
+      "id": "dasfilament_1kg",
+      "name": "Das Filament <br/>MasterSpool 1 kg",
+      "urls": [
+        "https://www.dasfilament.de/zubehoer/912/masterspool-1-kg-wiederverwendbare-leerspule-fuer-refills?c=63"
+      ]
+    },
+    {
+      "id": "sunlu_v2",
+      "name": "Sunlu Spool V2",
+      "urls": [
+        "https://www.sunlu.com/"
+      ]
+    },
+    {
+      "id": "sunlu_v3",
+      "name": "Sunlu Spool V3",
+      "urls": [
+        "https://www.sunlu.com/"
+      ]
+    }
+  ],
   "refill": [
-    { "name": "Das Filament", "url": "https://www.dasfilament.de/filament-refill/" },
-    { "name": "Bambu Lab", "url": "https://bambulab.com/" },
-    {"name": "Fiberlogy", "url": "https://www.fiberlogy.com/en/collections/refill-spools"}
+    {
+      "id": "dasfilament_refill",
+      "name": "Das Filament",
+      "url": "https://www.dasfilament.de/filament-refill/"
+    },
+    {
+      "id": "bambulab_refill",
+      "name": "Bambu Lab",
+      "url": "https://eu.store.bambulab.com/de/collections/bambu-lab-3d-printer-filament"
+    },
+    {
+      "id": "fiberlogy_refill",
+      "name": "Fiberlogy",
+      "url": "https://www.fiberlogy.com/en/collections/refill-spools"
+    },
+    {
+      "id": "sunlu_refill",
+      "name": "Sunlu",
+      "url": "https://www.sunlu.com/products/sunlu-refill-filament-pla-pla-2-0-compatible-with-2025-sunlu-third-generation-reusable-spool-bambulab-reusable-spool-spool-free-filament"
+    }
   ],
   "compatibility": [
     {
-      "refill": "Das Filament",
-      "spool": "RichRap MasterSpool",
-      "status": "ok",
-      "note": ""
+      "refill_id": "bambulab_refill",
+      "spool_id": "bambuspool",
+      "status": "ok"
     },
     {
-      "refill": "Bambu Lab",
-      "spool": "Bambu Spool",
-      "status": "ok",
-      "note": ""
+      "refill_id": "bambulab_refill",
+      "spool_id": "sunlu_v3",
+      "status": "ok"
     },
     {
-      "refill":"Das Filament",
-      "spool":"Bambu Spool",
-      "status":"adapter",
-      "note":"Adapter ring needed",
-      "link":"https://www.dasfilament.de/zubehoer/913/refill-adapter-ring-fuer-bambu-lab-spulen?c=63"
+      "refill_id": "dasfilament_refill",
+      "spool_id": "bambuspool",
+      "status": "warning",
+      "note": "Adapter ring needed",
+      "link": "https://www.dasfilament.de/zubehoer/913/refill-adapter-ring-fuer-bambu-lab-spulen?c=63"
+    },
+    {
+      "refill_id": "dasfilament_refill",
+      "spool_id": "dasfilament_v32",
+      "status": "warning",
+      "note": "Only 800g refills fit"
+    },
+    {
+      "refill_id": "dasfilament_refill",
+      "spool_id": "dasfilament_1kg",
+      "status": "ok"
+    },
+    {
+      "refill_id": "dasfilament_refill",
+      "spool_id": "richrapspool",
+      "status": "ok"
+    },
+    {
+      "refill_id": "sunlu_refill",
+      "spool_id": "sunlu_v2",
+      "status": "warning",
+      "note": "Adapter ring needed",
+      "link": "https://makerworld.com/de/models/1127344-sunlu-to-bambu-spool-adapter-for-refil?from=search#profileId-1126988"
+    },
+    {
+      "refill_id": "sunlu_refill",
+      "spool_id": "sunlu_v3",
+      "status": "ok"
+    },
+    {
+      "refill_id": "sunlu_refill",
+      "spool_id": "bambuspool",
+      "status": "ok"
+    },
+    {
+      "refill_id": "fiberlogy_refill",
+      "spool_id": "bambuspool",
+      "status": "warning",
+      "note": "Adapter ring needed",
+      "link": "https://makerworld.com/en/models/24813-fiberlogy-refill-adaptor-to-bambulab-spool?from=search#profileId-348559"
+    },
+    {
+      "refill_id": "fiberlogy_refill",
+      "spool_id": "fiberlogyspool",
+      "status": "ok"
     }
-
   ]
 }
